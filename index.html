@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallet Connect & Transaction Check</title>
+    <title>TEA Checker</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Connect Your Wallet</h1>
-        <button id="connectButton">Connect Wallet</button>
-
-        <div id="walletInfo" style="display:none;">
-            <p>Connected Wallet: <span id="walletAddress"></span></p>
-            <button id="checkButton">Check!</button>
+        <div class="logo">
+            <span class="tea-text">TEA</span>
+            <span class="checker-text">checker</span>
         </div>
 
-        <div id="transactionStatus" style="display:none;">
-            <p>Транзакция выполнена!</p>
-            <p>Дата: <span id="transactionDate"></span> ✅</p>
-        </div>
+        <div class="main-content">
+            <button id="connectButton" class="connect-button">Connect Wallet</button>
 
-        <div id="calendar" style="display:none;"></div>
+            <div id="walletInfo" style="display:none;" class="wallet-info">
+                <p>Connected Wallet: <span id="walletAddress"></span></p>
+            </div>
+
+            <div id="calendar" class="calendar-container"></div>
+
+            <div id="transactionStatus" style="display:none;" class="transaction-status">
+                <div class="status-icon">✅</div>
+                <p>Transaction completed!</p>
+                <p>Date: <span id="transactionDate"></span></p>
+            </div>
+
+            <button id="checkButton" style="display:none;" class="check-button">Check Transaction</button>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js"></script> 
 </body>
 </html>
