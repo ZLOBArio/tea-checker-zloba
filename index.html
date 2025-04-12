@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Connect & Transaction Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Connect Your Wallet</h1>
+        <button id="connectButton">Connect Wallet</button>
+
+        <div id="walletInfo" style="display:none;">
+            <p>Connected Wallet: <span id="walletAddress"></span></p>
+            <button id="checkButton">Check!</button>
+        </div>
+
+        <div id="transactionStatus" style="display:none;">
+            <p>Транзакция выполнена!</p>
+            <p>Дата: <span id="transactionDate"></span> ✅</p>
+        </div>
+
+        <div id="calendar" style="display:none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
